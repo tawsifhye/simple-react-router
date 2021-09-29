@@ -5,16 +5,20 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Friends from './components/Friends/Friends';
 import NotFound from './NotFound/NotFound';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header></Header>
         <Switch>
           <Route exact path='/'>
             <Home></Home>
           </Route>
-          <Route path='/home'></Route>
+          <Route path='/home'>
+            <Home></Home>
+          </Route>
           <Route path='/friends'>
             <Friends></Friends>
           </Route>
